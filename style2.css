@@ -1,0 +1,75 @@
+:root{
+    --color1: #ede4d0;
+    --color2: pink;
+    --color3: #393b4b;
+    --color4: rgb(18,19,19);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(/assets/img/Background_image.webp) center/cover;
+    /* 100/100 de la page */
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color1);
+    display: flex;
+    /* centrer les elements verticalement   */
+    align-items: center; 
+    /* centrer les elements horizontalement   */
+    justify-content: center;
+}
+
+
+.card{
+    background: rgba(0, 0, 0, 0.5);
+    /* 100% de taille de l'ecran en laissant 25px de marge sur chaque coté */
+    width: calc(100% - 50px);
+    /* 3 elements dans le padding (en haut , gauche droite, en bas ) */
+    padding: 20px 20px 20px;
+    box-shadow: 9px 6px 9px 4px black;
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+}
+
+.card:before{
+    /* On a utilisé le site "https://www.toptal.com/designers/htmlarrows/symbols/" pour récupérer le symbole */
+   content: "\2730" ;
+   position: absolute;
+   top: 10px;
+   right : 20px;
+   font-size : 2rem; 
+}
+
+h1 {
+    margin-bottom: 24px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.polygon{
+    /* On utilise le site https://bennettfeely.com/clippy/  pour récupérer le polygone mais il faut préciser la taille et la couleur pour pouvoir voir le polygone */
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background: linear-gradient(135deg, rgb(2, 229, 250) 0%, rgb(10, 247, 2) 100%);
+    height: 60px;
+    width : 80px;
+}
+
+.polygon:after{
+    content : "Un texte";
+    position : relative;
+    background :black;
+    color : pink;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%) rotate(344deg);
+    width: 70px;
+    padding: 4px;
+    text-align: center;
+}
